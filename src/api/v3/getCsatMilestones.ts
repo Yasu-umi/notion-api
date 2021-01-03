@@ -2,6 +2,6 @@ export const path = "/api/v3/getCsatMilestones";
 
 export const method = "POST";
 
-export type Request = {};
+export type Request = unknown;
 
-export type Response = {};
+export type Response = unknown;

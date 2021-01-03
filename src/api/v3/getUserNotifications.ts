@@ -9,7 +9,7 @@ export type Request = {
 };
 
 export type Response = {
-  recordMap: {};
+  recordMap: unknown;
   results: {
     spaceId: spaceId;
     unread: {

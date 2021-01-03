@@ -1,10 +1,26 @@
 import * as types from "./types";
 
-export const path = "/api/v3/loadUserContent";
+export const path = "/api/v3/loadPageChunk";
 
 export const method = "POST";
 
-export type Request = unknown;
+export type Request = {
+  chunkNumber: number;
+  cursor: {
+    stack: [
+      [
+        {
+          id: types.uuidv4;
+          index: number;
+          table: "block";
+        }
+      ]
+    ];
+  };
+  limit: number;
+  pageId: types.pageId;
+  verticalColumns: boolean;
+};
 
 export type Response = {
   recordMap: {
